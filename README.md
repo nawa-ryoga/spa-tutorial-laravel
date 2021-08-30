@@ -1,0 +1,1 @@
+こちらのQiita記事「[Vue.js + LaravelでシンプルなSPA構築チュートリアル：概要編](https://qiita.com/minato-naka/items/2d2def4d66ec88dc3ca2)」を見ながら実践している、Vue.jsによるSPA開発の学習用リポジトリです。
