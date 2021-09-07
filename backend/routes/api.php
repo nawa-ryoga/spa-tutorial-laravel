@@ -15,10 +15,12 @@ use App\Http\Controllers\TaskController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
 Route::get('/tasks', [TaskController::class, 'index']);
 Route::post('/tasks', [TaskController::class, 'store']);
 Route::get('/tasks/{task}', [TaskController::class, 'show']);
+Route::put('/tasks/{task}', [TaskController::class, 'update']);
+Route::destroy('/tasks/{task}', [TaskController::class, 'destroy']);
