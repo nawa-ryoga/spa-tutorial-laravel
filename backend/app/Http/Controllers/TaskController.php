@@ -14,4 +14,8 @@ class TaskController extends Controller
     public function show(Task $task) {
         return $task;
     }
+
+    public function store(Request $reqest) {
+        return Task::create($reqest->all());
+    }
 }
