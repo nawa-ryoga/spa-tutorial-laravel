@@ -29,7 +29,7 @@
             </router-link>
           </td>
           <td>
-            <button class="btn btn-danger">DELETE</button>
+            <button class="btn btn-danger" v-on:click="deleteTask(task.id)">DELETE</button>
           </td>
         </tr>
       </tbody>
@@ -46,9 +46,15 @@
     },
     methods: { // APIを叩いてタスク一覧を取得。成功時dataオプションへ登録
       getTasks() {
-        axios.get('/api/tasks')
+        axios.get('/api/tasks/')
           .then((res) => {
             this.tasks = res.data;
+          });
+      },
+      deleteTask(id) {
+        axios.delete('/api/tasks/' + id)
+          .then((res) => {
+            this.getTasks();
           });
       }
     },
